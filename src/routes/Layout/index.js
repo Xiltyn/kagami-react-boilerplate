@@ -4,9 +4,8 @@ import Route from 'react-router-dom/Route';
 import Helmet from 'react-helmet';
 // Routes
 
-import PublicRoute from 'utils/PublicRoute';
 import asyncRoute from 'utils/asyncComponent';
-import PrivateRoute from '../../utils/PrivateRoute';
+import RouteHandler from '../../utils/RouteHandler';
 
 const Content = asyncRoute(() => import('../Content'));
 const Login = asyncRoute(() => import('../Login'));
@@ -26,9 +25,9 @@ const Layout = () => (
         <Helmet titleTemplate="%s - Resume Writing Sucks" defaultTitle="Resume Writing Sucks" />
 
         <Switch>
-            <PublicRoute path="/login" component={ Login } exact={ true } />
-            <PublicRoute path="/signup" component={ Signup } exact={ true } />
-            <PrivateRoute path="/:view?" component={ Content } exact={ true } />
+            <RouteHandler path="/login" component={ Login } exact={ true } />
+            <RouteHandler path="/signup" component={ Signup } exact={ true } />
+            <RouteHandler path="/:view?" component={ Content } exact={ true } />
             <Route component={ Miss404 } />
         </Switch>
 

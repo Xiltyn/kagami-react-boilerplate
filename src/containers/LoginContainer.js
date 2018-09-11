@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 // components
-import AuthLogin from 'components/AuthLogin';
+import Login from 'components/Login/Login';
 // middlewares
 import AuthMiddleware from 'modules/auth/middleware';
 
@@ -40,7 +40,7 @@ class LoginContainer extends Component {
     render() {
         const { isAuthenticated, isProcessing, isRegistered, isError, errorMessage, signin } = this.props;
         return (
-            <AuthLogin
+            <Login
                 isAuthenticated={ isAuthenticated }
                 isProcessing={ isProcessing }
                 isRegistered={ isRegistered }

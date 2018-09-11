@@ -2,7 +2,7 @@ import React from 'react';
 import nprogress from 'nprogress';
 import PropTypes from 'prop-types';
 
-import LoaderSpinner from '../components/LoaderSpinner/LoaderSpinner';
+import LoaderSpinner from '../components/Loader/LoaderSpinner';
 
 // Flag for first route loaded on page
 // Use it to load Google Analytics and other deferred stuff
@@ -122,7 +122,7 @@ export default function asyncRoute(getComponent) {
 // import React from 'react';
 // import nprogress from 'nprogress';
 // import loadJS from 'fg-loadjs';
-// import LoaderSpinner from '../components/LoaderSpinner';
+// import Loader from '../components/Loader';
 // import preserver from './Preserver';
 //
 // let firstRoute = true;
@@ -179,7 +179,7 @@ export default function asyncRoute(getComponent) {
 //       }
 //       return (
 //         <div className="container text-xs-center" style={{ padding: '25vh 0' }}>
-//           <LoaderSpinner size={128} delay={true} />
+//           <Loader size={128} delay={true} />
 //         </div>
 //       );
 //     }

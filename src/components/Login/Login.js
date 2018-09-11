@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-class AuthLogin extends Component {
+class Login extends Component {
 
     static propTypes = {
         isProcessing: PropTypes.bool.isRequired,
@@ -86,4 +86,4 @@ class AuthLogin extends Component {
     }
 }
 
-export default AuthLogin;
+export default Login;

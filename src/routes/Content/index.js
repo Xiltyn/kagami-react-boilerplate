@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import NewResume from '../../containers/NewResume/NewResume';
-
-//const NewResume = asyncRoute(() => import('../../containers/NewResume/NewResume'));
+import Home from '../../containers/Home/Home';
+import Navigation from '../../components/Navigation/Navigation';
 
 class Content extends Component {
 
@@ -13,10 +12,9 @@ class Content extends Component {
     render() {
         return (
             <div>
-                <h4>Main content container with MID_LEVEL routing</h4>
-                <div>HEADER</div>
+                <Navigation />
                 <div className={ 'content' }>
-                    <Route path={ '/new-resume/:step?' } component={ NewResume } exact={ true }/>
+                    <Route path={ '/' } component={ Home } exact={ true }/>
                 </div>
             </div>
         );
