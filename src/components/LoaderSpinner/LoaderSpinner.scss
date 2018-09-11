@@ -1,0 +1,45 @@
+@keyframes bounceBetween {
+	0% {
+		transform: translateX(0) scale(1);
+	}
+	1% {
+		transform: translateX(0) scale(1);
+	}
+	22.5% {
+		transform: translate(50%, 20%) scale(.5);
+	}
+	48% {
+		transform: translateX(90%) scale(1);
+	}
+	52% {
+		transform: translateX(90%) scale(1);
+	}
+	77.5% {
+		transform: translate(50%, 20%) scale(.5);
+	}
+	99% {
+		transform: translateX(1%) scale(.99);
+	}
+	100% {
+		transform: translateX(1%) scale(.99);
+	}
+}
+
+.loader-spinner {
+	position: relative;
+
+	width: 160px;
+	height: 32px;
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		circle {
+			animation: bounceBetween 2s infinite ease-in-out;
+		}
+	}
+
+}
